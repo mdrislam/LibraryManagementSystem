@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="LMS_MEMBER_ID" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="27358d7c-9c42-4a7e-aebb-4bd0182bced9">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select * from lms_member]]>
+	</queryString>
+	<field name="ID" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CODE" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NAME" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="GENDER" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="MOBILE" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ADDRESS" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<detail>
+		<band height="304" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="30" y="19" width="202" height="285" backcolor="#CCFFFF" uuid="9f6fc6ca-79a6-4683-b052-b8ee7abede53"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#006666"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#006666"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#006666"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#006666"/>
+				</box>
+				<staticText>
+					<reportElement mode="Transparent" x="3" y="0" width="199" height="33" forecolor="#006666" backcolor="#CCCCCC" uuid="aa704b8a-e050-4da6-8fc2-f8f9a1b70deb"/>
+					<box bottomPadding="7"/>
+					<textElement textAlignment="Center">
+						<font size="18" isBold="true" isUnderline="false" isStrikeThrough="false"/>
+					</textElement>
+					<text><![CDATA[Member Id Card]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="3" y="202" width="199" height="20" uuid="a7604f8e-783c-432d-82e4-8e01a383ca12"/>
+					<textElement textAlignment="Center">
+						<font size="14" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{MOBILE}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="3" y="182" width="199" height="20" uuid="a4c8206a-880a-4ed1-9e08-198cffbb7ca5"/>
+					<textElement textAlignment="Center">
+						<font size="14" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{GENDER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="0" y="162" width="199" height="20" uuid="09036740-5267-4ac0-b68c-84240a3e6701"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="15" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{NAME}]]></textFieldExpression>
+				</textField>
+				<image>
+					<reportElement x="50" y="39" width="100" height="90" uuid="8bbb18ab-13af-4d6f-8f91-0558e1537cc9"/>
+					<imageExpression><![CDATA["..\\lms_member\\"+$F{ID}+".jpg"]]></imageExpression>
+				</image>
+				<textField>
+					<reportElement x="3" y="225" width="199" height="20" uuid="9fc20c6e-24c7-43db-81b2-588886e5c0d1"/>
+					<textElement textAlignment="Center">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{ADDRESS}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="0" y="32" width="202" height="1" backcolor="#FF6666" uuid="96032fe2-038a-4666-947b-69887698ac50"/>
+				</line>
+				<textField>
+					<reportElement x="3" y="142" width="199" height="20" uuid="e721bc51-3da2-426f-a557-7a0c64de389b"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="15" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{CODE}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement mode="Opaque" x="0" y="265" width="202" height="20" backcolor="#99CCFF" uuid="adb5e48c-5f3d-460c-9717-97fab84eff60"/>
+					<text><![CDATA[]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="283" y="19" width="200" height="285" forecolor="#CCFFFF" backcolor="#CCFFFF" uuid="33556fa1-8b8a-49ec-ae8a-f93fa3ddbdbe"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#006666"/>
+					<topPen lineWidth="1.0" lineColor="#006666"/>
+					<leftPen lineWidth="1.0" lineColor="#006666"/>
+					<bottomPen lineWidth="1.0" lineColor="#006666"/>
+					<rightPen lineWidth="1.0" lineColor="#006666"/>
+				</box>
+				<staticText>
+					<reportElement mode="Opaque" x="0" y="19" width="200" height="20" forecolor="#003333" backcolor="#CCFFCC" uuid="a60be5f5-e652-4014-876d-01feb284bc2a"/>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="true" isUnderline="true"/>
+					</textElement>
+					<text><![CDATA[if it is found,please send to:-]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Transparent" x="0" y="39" width="200" height="20" forecolor="#330000" uuid="f7984a39-f7b1-4e2f-861d-e9a4d93315fc"/>
+					<textElement textAlignment="Center">
+						<font size="15" isBold="true" isItalic="false" isUnderline="false"/>
+					</textElement>
+					<text><![CDATA[Global Library]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Transparent" x="0" y="59" width="200" height="20" forecolor="#330000" uuid="1967f072-6190-4516-9c99-9d48f5c07616"/>
+					<textElement textAlignment="Center">
+						<font size="11" isBold="true" isItalic="false" isUnderline="false"/>
+					</textElement>
+					<text><![CDATA[12/5,chakbazar,Sadar]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Transparent" x="0" y="79" width="200" height="20" forecolor="#330000" uuid="050c9fb2-c115-40ca-aea4-b534754a7012"/>
+					<textElement textAlignment="Center">
+						<font size="11" isBold="true" isItalic="false" isUnderline="false"/>
+					</textElement>
+					<text><![CDATA[Lakshmipur-3701]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Transparent" x="0" y="99" width="200" height="20" forecolor="#330000" uuid="44c6b947-8358-4a06-ba4f-10df37a9455b"/>
+					<textElement textAlignment="Center">
+						<font size="11" isBold="true" isItalic="false" isUnderline="false"/>
+					</textElement>
+					<text><![CDATA[Phone: 01765420759]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Transparent" x="0" y="142" width="114" height="20" forecolor="#330000" uuid="877ff4b5-06eb-4065-b448-573ff7f74483"/>
+					<textElement textAlignment="Right">
+						<font size="11" isBold="true" isItalic="false" isUnderline="false"/>
+					</textElement>
+					<text><![CDATA[Holder's Contact : ]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="114" y="142" width="86" height="20" uuid="8f6865dc-e95b-47f9-9fa6-025d6e77a1f5"/>
+					<textElement>
+						<font size="11" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{MOBILE}]]></textFieldExpression>
+				</textField>
+				<componentElement>
+					<reportElement mode="Opaque" x="11" y="202" width="189" height="43" backcolor="#CCFFFF" uuid="9bdc45b1-d6eb-41f6-a9a5-854fa39f5233"/>
+					<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code128B" drawText="false" checksumRequired="false" barWidth="0" barHeight="0">
+						<jr:codeExpression><![CDATA[$F{CODE}]]></jr:codeExpression>
+					</jr:barbecue>
+				</componentElement>
+			</frame>
+		</band>
+	</detail>
+</jasperReport>
